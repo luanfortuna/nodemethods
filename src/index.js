@@ -3,14 +3,13 @@ const express = require('express');
 
 const app = express();
 
-app.use(express.json());
 
+app.use(express.json());
 
 
 app.get("/teams", (request, response)=> {
 
     const query = request.query;
-
     console.log(query);
 
   return response.json(["Botafogo","Goiás","Santos","Redbull","Palmeiras","Chapecoense"])
@@ -44,9 +43,5 @@ app.delete("/teams/:id", (request, response)=> {
     return response.json(["Atlético-MG","Grêmio"])    
 
 });
-
-
-
-
 
 app.listen(3333);
