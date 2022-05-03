@@ -44,4 +44,9 @@ app.delete("/teams/:id", (request, response)=> {
 
 });
 
-app.listen(3333);
+
+app.listen(3333, function() {
+
+console.log("O servidor está rodando na porta 3333")
+
+});
